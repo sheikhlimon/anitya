@@ -321,6 +321,10 @@ Patterns -
     to the year 2000. Usage of weeks is usually mutually exclusive
     with months/days.
 
+    **Note on padding:** Zero-padding specifiers (e.g., ``0M``, ``0D``) and short 
+    specifiers (e.g., ``MM``, ``DD``) are **strictly enforced**. If an upstream version 
+    uses zero-padded dates but the project pattern is set to ``MM``, parsing will fail. 
+    Anitya treats unparseable versions as invalid and sorts them at the bottom of the list.
 
 Version Prefix
 --------------
